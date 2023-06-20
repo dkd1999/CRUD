@@ -1,0 +1,125 @@
+
+.major{
+    height: 80vh;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pro-div{
+    height: 220px;
+}
+#pro-pic{
+    border-radius: 50%;
+}
+#pro-name{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: blanchedalmond;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 0px;
+}
+.btns h2{
+    font-size: 40px;
+    font-weight: 600;
+    background: linear-gradient(149deg, #0061a1, #4800c5, #a3009e, #1400ac, #00b963, #ac00a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      background-size: 1200% 1200%;
+    -webkit-animation: AnimationName 35s ease infinite;
+    -moz-animation: AnimationName 35s ease infinite;
+    animation: AnimationName 35s ease infinite;
+    text-align: center;
+    line-height: 60px;
+    padding: 0px 20px;
+  }
+
+  @-webkit-keyframes AnimationName {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+  }
+
+#login-btn{
+    padding: 14px 20px;
+    text-decoration: none;
+    background-color: rgb(15, 223, 77);
+    color: rgb(9, 9, 9);
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.2s ease-in;
+}
+#login-btn:hover{
+    scale: 1.04;
+    font-weight: 500;
+}
+#logout-btn{
+    padding: 14px 15px;
+    text-decoration: none;
+    background-color: #c90000;
+    color: beige;
+    border-radius: 15px;
+    font-size: 20px;
+    transition: all 0.2s ease-in;
+    border: 0px;
+}
+#logout-btn:hover{
+    scale: 1.04;
+    font-weight: 500;
+}
+
+#editprofile{
+    padding: 11px;
+    text-decoration: none;
+    background-color: #FA8072;
+    color: rgb(9, 9, 9);
+    border-radius: 14px;
+    font-weight: 500;
+}
+#collapseEdit{
+    margin-top: 10px;
+    background-color: rgba(0, 0, 255, 0);
+}
+#editBody{
+    background-color: rgba(137, 43, 226, 0.034);
+    border-radius: 20px;
+}
+#editBody input{
+    height: 45px;
+    border-radius: 20px;
+    background-color: rgba(194, 130, 255, 0.123);
+    border: 0px;
+    color: blanchedalmond;
+}
+#editBody label{
+    height: 10px;
+    color: blanchedalmond;
+    font-size: 12px;
+}
+#editBody label::after{
+    background-color:rgba(230, 230, 250, 0);
+    font-size: 5px;
+
+}
+#inpbox{
+    background-color: rgba(0, 0, 255, 0);
+}

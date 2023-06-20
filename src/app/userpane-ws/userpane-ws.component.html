@@ -1,0 +1,115 @@
+
+<div class="major">
+    <div class="herologo">
+        <nav id="navbar" class="navbar navbar-expand-lg" data-bs-theme dark>
+            <div class="container-fluid">
+                <div id="navbar_pane">
+                    <div>
+                        <a class="navbar-brand ms-auto" href="#"><img
+                                src="assets/c3.png"
+                                alt="crud"></a>
+                    </div>
+    
+                    <!-- add contact -->
+                    <!-- <div matRipple [matRippleColor]="myColor"></div> -->
+                    <!-- <div id="contactdiv">
+                        <button mat-mini-fab color="accent"
+                            aria-label="Example icon button with a delete icon"
+                            id="addcontact">
+                            <img src="assets/add-user.png" height="40px" alt>
+                        </button>
+                    </div>
+        
+                    <div>
+                        <button id="admin_menu" mat-mini-fab color="accent" class="btn"
+                            type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">
+                            <img src="assets/password1.png" height="40px" alt>
+                        </button>
+                    </div> -->
+                </div>
+    
+            </div>
+        </nav>
+    </div>
+    <div class="profile">
+        <div id="admin_panel">
+            <p>Admin Panel</p>
+        </div>
+        <div class="pro-div">
+            <img *ngIf="(login_username)?.length" id="pro-pic" 
+                
+                src={{login_photo}}>
+                
+        </div>
+        <h1 id="login-h2" *ngIf="(login_username)?.length==0">Login to access all features</h1>
+        <div id="pro-name">
+            
+            <p>{{login_username}}</p>
+        </div>
+        <div class="btns">
+
+            <a *ngIf="(login_username)?.length==0" id="login-btn"
+                [routerLink]="[{ outlets: { cyna: ['login'] } }]">Login</a>
+            <button *ngIf="(login_username)?.length"
+                id="logout-btn" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop1">Log Out</button>
+
+            <!-- <a id="login-btn" [routerLink]="[{ outlets: { cyna: ['register'] } }]">register</a> -->
+
+            <!-- <a id="editprofile" data-bs-toggle="collapse"
+            href="#collapseEdit">Edit Profile</a>
+            <a href=""></a> -->
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+    <!-- <div class="collapse" id="collapseEdit">
+        <div class="card card-body" id="editBody">
+            <form #addadminForm="ngForm" >
+                <div class="form-floating mb-3" id="inpbox">
+                    <input type="text" class="form-control"
+                        id="floatingPassword" placeholder="id" name="id" #id = "ngModel" [(ngModel)]="admindata.id">
+                    <label for="floatingPassword">Unique ID</label>
+                </div>
+                <div class="form-floating mb-3" id="inpbox">
+                    <input type="text" class="form-control" id="floatingInput"
+                        placeholder="Name" name="name" #name = "ngModel" [(ngModel)]="admindata.profileName">
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating" id="inpbox">
+                    <input type="text" class="form-control"
+                        id="floatingPassword" placeholder="Profile image URL" name="photo" #photo = "ngModel" [(ngModel)]="admindata.profileImg">
+                    <label for="floatingPassword">Profile image URL</label>
+                </div>
+               
+                <div confirm-btns>
+                    <button (click)="addadmin(admindata)" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div> -->
+</div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center d-flex align-items-center justify-content-center" id="staticBackdropLabel">Confirm</h1>
+          <button type="button" class="btn-close rounded-3" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgba(240, 255, 240, 0.445);padding: 0px;height: 30px; width: 30px;"></button>
+        </div>
+        <div class="modal-body text-center fs-5 d-flex align-items-center justify-content-center">Log out as Admin from C.R.U.D?
+           <!-- <img src="https://cdn.pixabay.com/animation/2022/11/16/11/48/11-48-37-507_512.gif" height="150px" alt="" style="border-radius: 50%;">  -->
+           
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="background-color: #18ca30;border: 0px;">Go Back</button>
+          <button (click)="logout()" type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: #f30000;border: 0px;">Log Out</button>
+        </div>
+      </div>
+    </div>
+  </div>

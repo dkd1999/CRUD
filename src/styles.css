@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  scroll-behavior: smooth;
+
+}
+ ngb-modal-backdrop {
+    z-index: 1 !important;
+  }
+
+* {
+  /* scrollbar for mozilla */
+  scrollbar-width: thin;
+  scrollbar-color: red rgba(0, 0, 0, 0);
+
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-button {
+  background: rgba(0, 0, 0, 0.007);
+}
+::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: antiquewhite;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

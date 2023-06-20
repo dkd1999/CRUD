@@ -1,0 +1,135 @@
+<div class="major">
+    <div class="bminor">
+        <div id="contacts-head">
+            <img id="dummy" width="45px" height="45px" src alt>
+            <p>Users</p>
+            <div>
+                <a [routerLink]="[{ outlets: { dyna: ['addcontact'] } }]">
+                    <img *ngIf="(login_username)?.length" height="45px" width="45px"
+                        src="assets/add-user.png" alt>
+                </a>
+            </div>
+        </div>
+        <!-- <a [routerLink]="[{ outlets: { cyna: ['login'] } }]">login</a>
+        <a [routerLink]="[{ outlets: { cyna: ['register'] } }]">register</a> -->
+    
+        <!-- <a [routerLink]="[{ outlets: { dyna: ['viewcontact'] } }]">view</a>
+     <br>
+     <a [routerLink]="[{ outlets: { dyna: ['editcontact'] } }]">edit </a> -->
+        <div id="searchbar_div">
+            <input id="searchbar" [(ngModel)]="searchKey" type="text"
+                class="form-control"
+                placeholder="Search user name here">
+        </div>
+    
+        <div id="errorMsg" *ngIf="errorMsg" class="alert alert-primary" role="alert">
+            {{errorMsg}}
+        </div>
+    
+        <!-- if not contact matched in input field -->
+        <div class="noresult"
+            *ngIf="(allContacts | filter : searchKey : 'firstName').length==0 && !isLoading">
+            <h2>No result found</h2>
+            <img id="noresult"
+                src="https://uploads-ssl.webflow.com/5fa27c3574b213fae018d63e/61db77ae62249315c10cf2d3_animation_500_kxszguql.gif"
+                height="400px" alt="No result found">
+        </div>
+    </div>
+    <div id="spinner"><span class="loader" *ngIf="isLoading"></span></div>
+    <div class="minor" *ngIf="!isLoading">
+
+        <div class="section_our_solution"
+            *ngFor="let contact of allContacts | filter : searchKey : 'firstName' ">
+
+            <div id="main-card" class="col-l col-md-12 col-sm-12">
+
+                <div class="solution_card">
+
+                    <div class="sidebyside">
+                        <div class="contact-img-name">
+                            <div class="so_top_icon">
+                                <img id="contact-img" [src]="contact.image"
+                                    alt="contact image">
+
+                            </div>
+                            <div
+                                class="solu_title">
+                                <h2>{{contact.firstName}} {{contact.lastName}}</h2>
+                                <!-- <h4>Gender : {{json}}</h4> -->
+                            </div>
+                        </div>
+                        <div
+                            class="solu_description">
+
+                            <p>Age : {{contact.age}}</p>
+                            <p>Email : {{contact.email}}</p>
+                            <p>Company : {{contact.companyName}}</p>
+                            <p>Department : {{contact.companyDepartment}}</p>
+
+                        </div>
+                        <div class="contact">
+                            <button class="btn" id="view"
+                                [routerLink]="[{ outlets: { dyna: ['viewcontact', contact.id] } }]">View</button>
+                            <button class="btn" id="edit"
+                                *ngIf="(login_username)?.length"
+                                [routerLink]="[{ outlets: { dyna: ['editcontact', contact.id] } }]">Edit</button>
+                            <button class="btn" id="delete"
+                                *ngIf="(login_username)?.length"
+                                data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Delete</button>
+
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop"
+                            data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5"
+                                            id="staticBackdropLabel">Delete User
+                                        </h1>
+                                        <button type="button" class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"
+                                            style="background-color: rgba(240, 255, 240, 0.445);padding: 0px;height: 30px; width: 30px;"></button>
+                                    </div>
+                                    <div
+                                        class="modal-body text-center fs-5 d-flex align-items-center justify-content-center">Are
+                                        you sure? This action cannot be undone.
+                                        <!-- <img src="https://cdn.pixabay.com/animation/2022/11/16/11/48/11-48-37-507_512.gif" height="150px" alt="" style="border-radius: 50%;">  -->
+
+                                    </div>
+                                    <div
+                                        class="modal-footer justify-content-center">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-bs-dismiss="modal"
+                                            style="background-color: #16b62b;border: 0px;">Close</button>
+                                        <button type="button"
+                                            class="btn btn-primary"
+                                            (click)="delContact(contact.id)"
+                                            style="background-color: #d30000;border: 0px;">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--  -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <a  routerLink="viewcontact">view</a>
+<a  routerLink="editcontact">edit</a>
+
+<a routerLink="viewcontact-mobile">view-mob</a>
+<a routerLink="editcontact-mobile">edit-mob</a>
+
+<button (click)="viewmob()">view</button> -->

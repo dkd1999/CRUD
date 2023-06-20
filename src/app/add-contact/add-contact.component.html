@@ -1,0 +1,334 @@
+<div class="major">
+    <div id="main"
+    class="d-flex flex-column align-items-center">
+    <div id="check-card" class="card">
+        <div  class="p-4">
+            <p id="head" class="text-center fw-semibold">
+            Add User
+        </p>
+        <a routerLink>
+            <img height="30px"src="assets/close.png" alt="close"></a>
+        </div>
+        
+        <div id="check-card-body" class="card-body">
+            <div class="row mb-4">
+                <div id="form" class="col">
+                    <form #addContactForm="ngForm">
+
+                        <!-- contact id -->
+                        <div class="mb-4">
+                            <label class="form-label">User
+                                ID</label>
+                            <input name="id" #id="ngModel"
+                                [(ngModel)]="contact.id"
+                                type="text" class="form-control rounded-4"
+                                required
+                                placeholder="Enter your ID here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- contact id validation-->
+                            <div *ngIf="id.invalid && id.touched"
+                                class="text-danger">Please enter a valid ID</div>
+                        </div>
+
+                        <!-- Firstname -->
+                        <div class="mb-4">
+                            <label class="form-label">User
+                                First Name</label>
+                            <input name="firstName" #name="ngModel"
+                                [(ngModel)]="contact.firstName"
+                                type="text" class="form-control rounded-4"
+                                required
+                                pattern="[a-z A-Z]*"
+                                placeholder="Enter your first name here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- Firstname  validation-->
+                            <div *ngIf="name.invalid && name.touched"
+                                class="text-danger">Please enter a valid
+                                first name
+                            </div>
+
+                        </div>
+
+                        <!-- Lastname-->
+                        <div class="mb-4">
+                            <label class="form-label">User Last
+                                Name</label>
+                            <input name="lastName" #lastName="ngModel"
+                                [(ngModel)]="contact.lastName"
+                                type="text" class="form-control rounded-4"
+                                required
+                                pattern="[a-z A-Z]*"
+                                placeholder="Enter your last name here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- Lastname  validation-->
+                            <div
+                                *ngIf="lastName.invalid && lastName.touched"
+                                class="text-danger">please enter a valid
+                                last name</div>
+
+                        </div>
+
+                        <!-- contact age -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Age</label>
+                            <input name="age" #age="ngModel"
+                                [(ngModel)]="contact.age"
+                                type="text" class="form-control rounded-4"
+                                required
+                                pattern="[0-9]*" maxlength="3"
+                                placeholder="Enter your age here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- contact age validation-->
+                            <div *ngIf="age.invalid && age.touched"
+                                class="text-danger">Please enter a valid age</div>
+
+                        </div>
+
+                        <!-- contact Birthdate -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Date of Birth</label>
+                            <input name="birthDate" #birthDate="ngModel"
+                                [(ngModel)]="contact.birthDate"
+                                type="date" class="form-control rounded-4"
+                                required
+                                placeholder="Enter your Birth Date here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- contact Birthdate validation-->
+                            <div *ngIf="birthDate.invalid && birthDate.touched"
+                                class="text-danger">Please enter a valid birth date</div>
+
+                        </div>
+
+                        <!-- contact Blood Group -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Blood Type</label>
+                            <input name="bloodGroup" #bloodGroup="ngModel"
+                                [(ngModel)]="contact.bloodGroup"
+                                type="text" class="form-control rounded-4"
+                                required
+                                placeholder="Enter your blood group here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- contact Blood Group validation-->
+                            <div *ngIf="bloodGroup.invalid && bloodGroup.touched"
+                                class="text-danger">Please enter a valid blood type</div>
+
+                        </div>
+
+                        <!-- contact Company Department -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Company Department</label>
+                            <input name="companyDepartment" #companyDepartment="ngModel"
+                                [(ngModel)]="contact.companyDepartment"
+                                type="text" class="form-control rounded-4"
+                                required
+                                placeholder="Enter your company department here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- contact Company Department validation-->
+                            <div *ngIf="companyDepartment.invalid && companyDepartment.touched"
+                                class="text-danger">Please enter a valid company department</div>
+
+                        </div>
+
+                        <!-- options -->
+                        <label class="form-label">Gender</label>
+
+                        <div class="mb-4">
+                            <select name="genderId" #genderId="ngModel"
+                                [(ngModel)]="contact.genderId"
+                                class="form-select rounded-4" required
+                                pattern="[0-9]*"
+                                style="background-color: rgba(240, 248,
+                                255, 0.288);">
+
+                                <option selected disabled hidden>{{contact.genderId}}</option>
+                                <option [value]="gender.id"
+                                    *ngFor="let gender of
+                                    genders">{{gender.type}}</option>
+
+                            </select>
+                            <!-- groupId validation  -->
+                            <div
+                                *ngIf="genderId.invalid && genderId.touched"
+                                class="text-danger">Please select a gender
+                            </div>
+
+                        </div>
+
+                        <!-- photo-->
+                        <div class="mb-4">
+                            <label class="form-label">User
+                                Image URL</label>
+                            <input name="photo" #photo="ngModel"
+                                [(ngModel)]="contact.image"
+                                type="text" class="form-control rounded-4"
+                                required
+                                placeholder="Enter your user image URL here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- photo validation -->
+                            <div *ngIf="photo.invalid && photo.touched"
+                                class="text-danger">Please enter a valid
+                                contact
+                                image</div>
+
+                        </div>
+
+                        <!-- mobile -->
+                        <div class="mb-4">
+                            <label class="form-label">User
+                                Mobile Number</label>
+                            <input name="mobile" #mobile="ngModel"
+                                [(ngModel)]="contact.phone" type="text"
+                                class="form-control rounded-4" required
+                                pattern="[0-9]*" minlength="10"
+                                maxlength="10"
+                                placeholder="Enter your contact number here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- mobile validation -->
+                            <div *ngIf="mobile.invalid && mobile.touched"
+                                class="text-danger">please enter a contact
+                                number</div>
+
+                        </div>
+
+                        <!-- email -->
+                        <div class="mb-4">
+                            <label class="form-label">User
+                                Email ID</label>
+                            <input name="email" #email="ngModel"
+                                [(ngModel)]="contact.email"
+                                type="text" class="form-control rounded-4"
+                                required
+                                email
+                                placeholder="Enter your email ID here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- email validation -->
+                            <div *ngIf="email.invalid && email.touched"
+                                class="text-danger">please enter a valid user
+                                email
+                                ID</div>
+
+                        </div>
+
+                        <!-- company name -->
+                        <div class="mb-4">
+                            <label class="form-label">
+                                Company Name</label>
+                            <input name="company" #company="ngModel"
+                                [(ngModel)]="contact.companyName"
+                                type="text"
+                                class="form-control rounded-4" required
+                                placeholder="Enter your company name here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- company name validation -->
+                            <div *ngIf="company.invalid && company.touched"
+                                class="text-danger">please enter
+                                company name</div>
+
+                        </div>
+
+                        <!-- contact title -->
+                        <div class="mb-4">
+                            <label class="form-label">Job
+                                Title</label>
+                            <input name="companyTitle" #companyTitle="ngModel"
+                                [(ngModel)]="contact.companyTitle"
+                                type="text" class="form-control rounded-4"
+                                required
+                                pattern="[a-zA-Z., ]*"
+                                placeholder="Enter your Job title here"
+                                style="background-color: rgba(240, 248, 255,
+                                0.288);">
+                            <!-- contact title validation -->
+                            <div *ngIf="companyTitle.invalid && companyTitle.touched"
+                                class="text-danger">please enter a job
+                                title</div>
+
+                        </div>
+
+                        <!-- options -->
+                        <!-- <select name="groupId" #groupId="ngModel"
+                            [(ngModel)]="contact.groupId"
+                            class="form-select" required pattern="[0-9]*"
+                            style="background-color: rgba(240, 248,
+                            255, 0.288);">
+
+                            <option selected disabled hidden>Select Group </option>
+                            <option [value]="group.id" *ngFor="let group of
+                                groups">{{group.name}}</option>
+
+                        </select> -->
+
+                        <!-- groupId validation -->
+                        <!-- <div *ngIf="groupId.invalid && groupId.touched"
+                            class="text-danger">Please select a valid group
+                            id</div> -->
+
+                        <div class="buttons">
+                            <button (click)="addContact(contact)"
+                                [disabled]="addContactForm.invalid"
+                                type="submit"
+                                class="btn btn-primary mt-3">Add</button>
+                            <!-- <a class="btn btn-danger mt-3 ms-4 rounded-5"
+                                routerLink>Close</a> -->
+                        </div>
+                    </form>
+                </div>
+                <div [hidden]="addContactForm.invalid" class="col-lg-4"
+                    id="check-card-main-1">
+                    <!-- image -->
+                    <div id="check-card-1" class="card">
+                        <img height="auto" width="auto"
+                            [src]="contact.image" class="card-img-top"
+                            alt="profile image">
+                        <div id="check-card-body" class="card-body">
+                            <p class="card-title">Contact Name:
+                                {{contact.firstName}} {{contact.lastName}}</p>
+                            <p class="card-text">ID: {{contact.id}} </p>
+                            <p class="card-text">Mobile: {{contact.phone}}
+                            </p>
+                            <p class="card-text">Email: {{contact.email}}</p>
+                            <p class="card-text">Company:
+                                {{contact.companyName}}</p>
+                            <p class="card-text">Title: {{contact.companyTitle}}</p>
+                            <!-- <p class="card-text">Group: {{contact.groupId}}</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <p class="card-text">Group: {{contact.groupId}}</p> -->
+        </div>
+    </div>
+</div>
+    <!-- <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+               <div>
+                    <div id="head" style="background-color:  #150050;" class="p-4">
+                        <p class="text-center fw-semibold">
+                            User Details
+                        </p>
+                        <a id="close" routerLink>
+                            <img height="40px" src="assets/remove.png" alt="close"></a>
+                    </div>
+               </div>
+                 content
+               
+            </div>
+        </div>
+
+    </div> -->

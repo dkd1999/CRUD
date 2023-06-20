@@ -1,0 +1,59 @@
+<nav id="navbar" class="navbar navbar-expand-lg" data-bs-theme dark>
+  <div class="container-fluid">
+    <div id="navbar_pane">
+      <div>
+        <a class="navbar-brand ms-auto" href="#"><img
+            src="assets/c3.png"
+            alt="crud"></a>
+      </div>
+
+      <!-- add contact -->
+      <!-- <div matRipple [matRippleColor]="myColor"></div> -->
+      <div id="contactdiv" >
+        <button mat-mini-fab color="accent"
+          aria-label="Example icon button with a delete icon" id="addcontact"
+          (click)="addcon()" *ngIf="login_username?.length">
+          <img src="assets/add-user.png" height="40px" alt="add-user">
+        </button>
+      </div>
+
+      <div>
+        <button id="admin_menu" mat-mini-fab color="accent" class="btn"
+          type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <img src="assets/password1.png" height="40px" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <div class="offcanvas-title" id="offcanvasExampleLabel">
+          <p>Admin Panel</p>
+        </div>
+        <button id="close-btn" type="button" class="btn" data-bs-dismiss="offcanvas"
+          aria-label="Close"><img height="30px" src="assets/cancel1.png" alt=""></button>
+      </div>
+      <div class="offcanvas-body">
+        <div>
+          <!-- outlet for offcanvas -->
+          <router-outlet></router-outlet>
+          <!-- Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc. -->
+        </div>
+
+        <!-- <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
+      </div>
+    </div>
+
+  </div>
+</nav>

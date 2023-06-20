@@ -1,0 +1,27 @@
+<div class="major">
+    <div class="profile">
+        <div class="pro-div">
+            <img *ngIf="(login_username)?.length" id="pro-pic" height="180px"
+                width="180px"
+                src={{login_photo}}>
+        </div>
+        <div id="pro-name">
+            <p>{{login_username}}</p>
+        </div>
+        <div class="btns">
+            <h2 *ngIf="(login_username)?.length==0">Login to access all features</h2>
+            <a *ngIf="(login_username).length==0" id="login-btn"
+                routerLink="login">Login</a>
+            <button *ngIf="(login_username)?.length" id="logout-btn"
+                (click)="logout()">Logout</button>
+            <!-- <a id="editprofile" data-bs-toggle="collapse"
+            href="#collapseEdit">Edit Profile</a>
+            <a href=""></a> -->
+        </div>
+        <div>
+
+        </div>
+
+    </div>
+
+</div>

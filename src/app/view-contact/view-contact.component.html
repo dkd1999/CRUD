@@ -1,0 +1,42 @@
+<div class="major">
+    <div id="main"
+        class="d-flex flex-column align-items-center">
+        <div id="check-card" class="card">
+            <div style="background-color:  #150050;" class="p-4">
+                <p id="head" class="text-center fw-semibold">
+                    User Details
+                </p>
+                <a routerLink>
+                    <img height="40px" src="assets/remove.png" alt="close"></a></div>
+            <img height="auto" width="auto"
+                [src]="contact.image" class="card-img-top"
+                alt="...">
+            <div id="check-card-body" class="card-body">
+                <p class="card-title">Contact Name:
+                    {{contact.firstName}} {{contact.lastName}}</p>
+                <ul class="list-group list-group-flush">
+                    <p class="card-text">ID: {{contact.id}} </p>
+                    <p class="card-text">Age : <span class>{{contact.age}}</span>
+                    </p>
+                    <p class="card-text">Gender : <span class>{{gender}}</span>
+                    </p>
+                    <p class="card-text">Email : <span class>{{contact.email}}</span>
+                    </p>
+                    <p class="card-text">Phone : <span class>{{contact.phone}}</span>
+                    </p>
+                    <p class="card-text">BirthDate : <span class>{{contact.birthDate}}</span>
+                    </p>
+                    <p class="card-text">Blood Group : <span class>{{contact.bloodGroup}}</span>
+                    </p>
+                    <p class="card-text">Company : <span class>{{contact.companyName}}</span>
+                    </p>
+                    <p class="card-text">Department : <span class>{{contact.companyDepartment}}</span>
+                    </p>
+                    <p class="card-text">Title : <span class>{{contact.companyTitle}}</span>
+                    </p>
+                </ul>
+                <!-- <p class="card-text">Group: {{contact.groupId}}</p> -->
+            </div>
+        </div>
+    </div>
+</div>

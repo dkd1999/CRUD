@@ -1,0 +1,37 @@
+<div class="main">
+    <div class="main1">
+      <a id="button-back" routerLink="/login"><img height="30px" src="assets/back.png" alt=""></a>
+      <a id="button-backws" [routerLink]="['/',{outlets:{cyna : ['login']}}]"><img src="assets/back.png" alt=""></a>
+      <div id="welcome"><p>Not an Admin yet?</p></div>
+  <div id="log">
+         <p>Register with your username and password </p>
+    
+  </div>    
+      <div>
+          <div id="user" class="input-group flex-nowrap">
+              <input id="user-inp" name="username" (change)="getusername($event)" [(ngModel)]="username" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            
+            <div id="user" class="input-group flex-nowrap">
+              <input id="user-inp" name="photo" (change)="getuserphoto($event)" [(ngModel)]="photo" type="text" class="form-control" placeholder="Profile Image URL" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+
+            <div id="pass" class="input-group flex-nowrap">
+              
+              <input id="user-inp" name="password" (change)="getuserpswd($event)" [(ngModel)]="password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+            </div>
+      
+            <div id="pass" class="input-group flex-nowrap">
+              
+              <input id="user-inp" name="confirmpassword" (change)="getusercnfrmpswd($event)" [(ngModel)]="confirmpassword" type="password" class="form-control" placeholder="Confirm Password" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <div [innerHTML]="outputcontent">
+      
+            </div>
+            <div class="buttons">
+              <button id = "button-addon1" (click)="register()" class="btn btn-outline-secondary" type="button" id="button-addon1">Register</button>
+            </div>
+      </div>
+      
+    </div>
+  </div>

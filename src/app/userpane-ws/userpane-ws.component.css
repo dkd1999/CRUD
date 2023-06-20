@@ -1,0 +1,268 @@
+.major {
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+
+}
+.herologo{
+  height: 50vh;
+}
+.profile {
+  height: 50vh;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  
+}
+#admin_panel{
+  font-size: 34px;
+  font-weight: 500;
+  padding-bottom: 30px;
+}
+.pro-div {
+height: auto;
+}
+
+#pro-pic {
+  border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+}
+#pro-name {
+  font-size: 25px;
+  padding: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: blanchedalmond;
+}
+#login-h2{
+  
+  font-weight: 600;
+  background: linear-gradient(149deg, #0061a1, #4800c5, #a3009e, #1400ac, #00b963, #ac00a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    background-size: 1200% 1200%;
+  -webkit-animation: AnimationName 35s ease infinite;
+  -moz-animation: AnimationName 35s ease infinite;
+  animation: AnimationName 35s ease infinite;
+  text-align: center;
+  line-height: 60px;
+  padding: 0px 20px;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#login-btn {
+  padding: 14px 20px;
+  text-decoration: none;
+  background-color: rgb(15, 223, 77);
+  color: rgb(9, 9, 9);
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.1s ease-in;
+  border: 0px;
+  margin-bottom: 10px;
+}
+#login-btn:hover {
+  scale: 1.06;
+  font-weight: 500;
+}
+#logout-btn {
+  padding: 14px 17px;
+  text-decoration: none;
+  background-color: #c90000;
+  color: beige;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500; 
+  transition: all 0.1s ease-in;
+  border: 0px;
+    margin-bottom: 10px;
+}
+#logout-btn:hover {
+  scale: 1.06;
+  font-weight: 500;
+}
+#editprofile {
+  padding: 11px;
+  text-decoration: none;
+  background-color: #fa8072;
+  color: rgb(9, 9, 9);
+  border-radius: 14px;
+  font-weight: 500;
+}
+#collapseEdit {
+  margin-top: 10px;
+  background-color: rgba(0, 0, 255, 0);
+}
+#editBody {
+  background-color: rgba(137, 43, 226, 0.034);
+  border-radius: 20px;
+}
+#editBody input {
+  height: 45px;
+  border-radius: 20px;
+  background-color: rgba(194, 130, 255, 0.123);
+  border: 0px;
+  color: blanchedalmond;
+}
+#editBody label {
+  height: 10px;
+  color: blanchedalmond;
+  font-size: 12px;
+}
+#editBody label::after {
+  background-color: rgba(230, 230, 250, 0);
+  font-size: 5px;
+}
+#inpbox {
+  background-color: rgba(0, 0, 255, 0);
+}
+#navbar{
+  position: relative;
+  top: 0px;
+  height: 46vh;
+  padding: 0;
+  /* background-color: #394867; */
+  background: linear-gradient(149deg, #00385d, #29006e, #41003f, #0b0063, #008044, #63005e);
+  background-size: 1200% 1200%;
+
+  -webkit-animation: AnimationName 35s ease infinite;
+  -moz-animation: AnimationName 35s ease infinite;
+  animation: AnimationName 35s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:32% 0%}
+  50%{background-position:69% 100%}
+  100%{background-position:32% 0%}
+}
+
+#navbar_pane{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.btn{
+  background-color: #9BA4B5;
+}
+#contactdiv{
+  padding: 0 20px;
+}
+#addcontact{
+  background-color: rgba(73, 73, 73, 0.363);
+  color: rgb(141, 200, 64);
+  height: 50px;
+  width: 50px;
+}
+#addcontact mat-icon{
+  scale: 1.0;
+}
+#admin_menu {
+  background-color: #71b3ff4b;
+}
+.navbar-brand img{
+  width:16vw ;
+  
+}
+.modal-content{
+  background-color: #001c29;
+}
+.modal-header{
+  border: 0px;
+  align-items: start;
+}
+.modal-footer{
+  border: 0px;
+}
+.modal-footer button{
+  border: 0px;
+}
+  /* #offcanvasExample{
+      width: 86vw;
+      background: rgb(0,22,42);
+      background: -moz-linear-gradient(180deg, rgba(0,22,42,0.9023810207676821) 0%, rgba(26,0,56,0.96) 51%, rgba(0,35,43,0.9) 100%);
+      background: -webkit-linear-gradient(180deg, rgba(0,22,42,0.9023810207676821) 0%, rgba(26,0,56,0.96) 51%, rgba(0,35,43,0.9) 100%);
+      background: linear-gradient(180deg, rgba(0,22,42,0.9023810207676821) 0%, rgba(26,0,56,0.96) 51%, rgba(0,35,43,0.9) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00162a",endColorstr="#00232b",GradientType=1);         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00162a",endColorstr="#00232b",GradientType=1);         flex-direction: column;
+  }
+  #offcanvasExampleLabel{
+      font-size: 25px;
+      font-weight: 500;
+      color:rgb(216, 255, 254);
+  }
+  .offcanvas-header{
+      width: 100%;
+     background-color: #16024100;
+     
+  }
+  .offcanvas-title p{
+  margin:auto
+  } */
+  
+  /* #close-btn{
+      background-color: #39486700;
+      border: 0px;
+      padding: 0px;
+      height: fit-content;
+      width: fit-content;
+  }
+   */
+
+   
+@media only screen and (max-width:1000px) {
+  #pro-name {
+    font-size: 14px;
+    padding: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  #admin_panel p {
+    font-size: 18px;
+  }
+  #login-h2{
+    line-height: 28px;
+    padding: 0px 20px;
+    font-size: 17px;
+  }
+  #login-btn{
+    padding: 2px 6px;
+    font-size: 9px;
+}
+}

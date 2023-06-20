@@ -1,0 +1,103 @@
+#navbar{
+    height: 8vh;
+    padding: 0;
+    width: 100%;
+    /* background-color: #394867; */
+    background: linear-gradient(149deg, #00385d, #29006e, #41003f, #0b0063, #008044, #63005e);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: AnimationName 35s ease infinite;
+    -moz-animation: AnimationName 35s ease infinite;
+    animation: AnimationName 35s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:32% 0%}
+    50%{background-position:69% 100%}
+    100%{background-position:32% 0%}
+}
+
+#navbar_pane{
+    width: 100%;
+    display: flex;
+    justify-content:right;
+    align-items:center;
+}
+.btn{
+    background-color: #9BA4B5;
+}
+#contactdiv{
+    padding: 0 20px;
+}
+#addcontact{
+    background-color: rgba(73, 73, 73, 0.363);
+    color: rgb(141, 200, 64);
+    height: 50px;
+    width: 50px;
+}
+#addcontact mat-icon{
+    scale: 1.0;
+}
+#admin_menu {
+    background-color: #71b3ff4b;
+}
+.navbar-brand img{
+    height: 72px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+@media only screen and (max-width:355px){
+    .navbar-brand img{
+        height: 64px;
+
+}
+}
+@media only screen and (max-width:600px){
+    .navbar-brand img{
+        height: 113%;
+}
+}
+
+@media only screen and (max-width:810px){
+    #offcanvasExample{
+        width: 86vw;
+        background: rgb(0,22,42);
+        background: -moz-linear-gradient(180deg, rgba(0,22,42,0.9023810207676821) 0%, rgba(26,0,56,0.96) 51%, rgba(0,35,43,0.9) 100%);
+        background: -webkit-linear-gradient(180deg, rgba(0,22,42,0.9023810207676821) 0%, rgba(26,0,56,0.96) 51%, rgba(0,35,43,0.9) 100%);
+        background: linear-gradient(180deg, rgba(0,22,42,0.9023810207676821) 0%, rgba(26,0,56,0.96) 51%, rgba(0,35,43,0.9) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00162a",endColorstr="#00232b",GradientType=1);         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00162a",endColorstr="#00232b",GradientType=1);         flex-direction: column;
+    }
+    #offcanvasExampleLabel{
+        font-size: 25px;
+        font-weight: 500;
+        color:rgb(216, 255, 254);
+    }
+    .offcanvas-header{
+        width: 100%;
+       background-color: #16024100;
+       
+    }
+    .offcanvas-title p{
+    margin:auto
+    }
+    
+    #close-btn{
+        background-color: #39486700;
+        border: 0px;
+        padding: 0px;
+        height: fit-content;
+        width: fit-content;
+    }
+    
+}
